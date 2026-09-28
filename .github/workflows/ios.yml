@@ -1,0 +1,25 @@
+name: iOS simulator tests
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ios:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build simulator app and run tests
+        run: bash Scripts/verify-mac.sh
+      - name: Save verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cuike-ios-verification
+          retention-days: 7
+          path: |
+            build/*.log
+            build/*.txt
+            build/*.xcresult

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme LastUpgradeVersion="1600" version="1.3">
+ <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES"><BuildActionEntries>
+  <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="69838DF2BAE871A5C33DDCA9" BuildableName="Cuike.app" BlueprintName="Cuike" ReferencedContainer="container:Cuike.xcodeproj"/></BuildActionEntry>
+ </BuildActionEntries></BuildAction>
+ <TestAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv="YES"><Testables>
+  <TestableReference skipped="NO"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="7A7B278E0687A4B6850C0C30" BuildableName="CuikeTests.xctest" BlueprintName="CuikeTests" ReferencedContainer="container:Cuike.xcodeproj"/></TestableReference>
+  <TestableReference skipped="NO"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="BF171796FB94CEEB73AB9A3A" BuildableName="CuikeUITests.xctest" BlueprintName="CuikeUITests" ReferencedContainer="container:Cuike.xcodeproj"/></TestableReference>
+ </Testables></TestAction>
+ <LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="69838DF2BAE871A5C33DDCA9" BuildableName="Cuike.app" BlueprintName="Cuike" ReferencedContainer="container:Cuike.xcodeproj"/></BuildableProductRunnable></LaunchAction>
+ <ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="69838DF2BAE871A5C33DDCA9" BuildableName="Cuike.app" BlueprintName="Cuike" ReferencedContainer="container:Cuike.xcodeproj"/></BuildableProductRunnable></ProfileAction>
+ <AnalyzeAction buildConfiguration="Debug"/>
+ <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/>
+</Scheme>

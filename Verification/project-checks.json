@@ -1,0 +1,204 @@
+{
+  "scope": "Static structure only; not native compilation or execution",
+  "checks": [
+    {
+      "name": "Every Swift source is referenced by the Xcode project",
+      "passed": true
+    },
+    {
+      "name": "Four targets are present",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Cuike.entitlements",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/CuikeApp.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Data/BrewStore.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Data/Models.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Design/Theme.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Info.plist",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Navigation/AppRouter.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Services/OCRService.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Services/OpenLastRecipeIntent.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Services/SystemServices.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/BeanLibraryView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/BrewView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/HomeView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/JournalView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/RecipeView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/ScanView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/SettingsView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: App/Views/TastingView.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Config/Base.xcconfig",
+      "passed": true
+    },
+    {
+      "name": "File exists: Core/BrewDomain.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Resources/Assets.xcassets",
+      "passed": true
+    },
+    {
+      "name": "File exists: Resources/PrivacyInfo.xcprivacy",
+      "passed": true
+    },
+    {
+      "name": "File exists: Resources/sample-bean.png",
+      "passed": true
+    },
+    {
+      "name": "File exists: Shared/BrewActivityAttributes.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Shared/SharedSnapshot.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Tests/AppTests/BrewStoreTests.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Tests/CoreTests/BrewDomainTests.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Tests/UITests/CuikeUITests.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Widgets/CuikeWidgets.entitlements",
+      "passed": true
+    },
+    {
+      "name": "File exists: Widgets/CuikeWidgets.swift",
+      "passed": true
+    },
+    {
+      "name": "File exists: Widgets/Info.plist",
+      "passed": true
+    },
+    {
+      "name": "Valid plist: App\\Info.plist",
+      "passed": true
+    },
+    {
+      "name": "Valid plist: Widgets\\Info.plist",
+      "passed": true
+    },
+    {
+      "name": "Valid plist: App\\Cuike.entitlements",
+      "passed": true
+    },
+    {
+      "name": "Valid plist: Widgets\\CuikeWidgets.entitlements",
+      "passed": true
+    },
+    {
+      "name": "Valid plist: Resources\\PrivacyInfo.xcprivacy",
+      "passed": true
+    },
+    {
+      "name": "Camera purpose is present",
+      "passed": true
+    },
+    {
+      "name": "Live Activities enabled",
+      "passed": true
+    },
+    {
+      "name": "App and widget use same group variable",
+      "passed": true
+    },
+    {
+      "name": "URL scheme is cuike",
+      "passed": true
+    },
+    {
+      "name": "Widget extension point",
+      "passed": true
+    },
+    {
+      "name": "Asset exists: AppIcon.png",
+      "passed": true
+    },
+    {
+      "name": "Both test targets in shared scheme",
+      "passed": true
+    },
+    {
+      "name": "No remote application dependencies",
+      "passed": true
+    },
+    {
+      "name": "No fixed OCR response",
+      "passed": true
+    },
+    {
+      "name": "Brew has no pause action",
+      "passed": true
+    },
+    {
+      "name": "Atomic shared snapshot writes",
+      "passed": true
+    }
+  ],
+  "swift_files": 23,
+  "swift_lines_including_tests_and_blanks": 2095,
+  "errors": []
+}

@@ -1,0 +1,53 @@
+name: Build iPhone IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iphone-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  iphone:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run core tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          swift test 2>&1 | tee build/core-tests.log
+      - name: Build device app and package IPA
+        run: bash Scripts/build-iphone.sh
+      - name: Upload IPA for Windows signing
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cuike-iPhone-unsigned
+          path: |
+            build/iphone/Cuike-unsigned.ipa
+            build/iphone/build-info.txt
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cuike-build-logs
+          path: |
+            build/*.log
+            build/iphone/*.log
+            build/iphone/*.txt
+          retention-days: 7
+      - name: Installation next step
+        run: |
+          echo '### IPA ready for Windows signing' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Download **Cuike-iPhone-unsigned**, unzip it, then open **Cuike-unsigned.ipa** in Sideloadly on Windows.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'This package requires Apple ID signing on your PC before it can run on an iPhone. See Docs/GitHubActions到iPhone.md.' >> "$GITHUB_STEP_SUMMARY"
+
