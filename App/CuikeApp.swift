@@ -11,7 +11,9 @@ import Combine
         do {
             let schema = Schema([BeanRecord.self, RecipeRecord.self, BrewRecord.self, LibraryMetadata.self])
             let inMemory = ProcessInfo.processInfo.arguments.contains("--uitesting")
-            let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory, cloudKitDatabase: .none)
+            // The widget shares only a JSON snapshot, never the private SwiftData database.
+            let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory,
+                groupContainer: .none, cloudKitDatabase: .none)
             let container = try ModelContainer(for: schema, configurations: [configuration])
             let loadedStore = try BrewStore(container: container)
             self.container = container
