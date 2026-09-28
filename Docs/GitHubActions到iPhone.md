@@ -8,7 +8,7 @@
 
 工程根目录是 `D:\Ios2Harmony\ios`，应直接包含 `Cuike.xcodeproj`、`App`、`Scripts` 和 `.github`。
 
-本项目准备使用私有仓库 **liuxingwen1016-sys/cuike-ios**。云端首轮执行情况见 `Verification/GitHubActions验证说明.md`（首次执行完成后补充）。
+本项目已创建私有仓库 [liuxingwen1016-sys/cuike-ios](https://github.com/liuxingwen1016-sys/cuike-ios)，并完成首轮原生编译。最新执行结果见 `Verification/GitHubActions验证说明.md`。
 
 只上传此 iOS 工程，不需要上传上级的研究仓库、网页设计包或整个 D 盘。不要仅把源码 ZIP 上传到 GitHub；Actions 需要看到真实的 `.github/workflows/build-iphone.yml` 文件。
 

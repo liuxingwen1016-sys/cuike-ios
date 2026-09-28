@@ -2,7 +2,7 @@
 
 一款离线手冲咖啡伴侣，也是 iOS → HarmonyOS 迁移演示的源端工程。
 
-**2026-09-28 交付状态：首版原生代码已实现，业务核心测试通过；首次 GitHub Actions 编译与真机安装正在准备。** 当前开发机是 Windows，已通过 USB 检测到 iPhone；型号与 iOS 27.0 由用户提供。不要把网页原型当作 iOS 运行证据。
+**2026-09-28 交付状态：业务核心测试通过，已在 GitHub Actions / Xcode 27 完成首轮真机编译并生成 IPA；尚未完成本地 iPhone 签名安装与真机验收。** 当前开发机是 Windows，已通过 USB 检测到 iPhone；型号与 iOS 27.0 由用户提供。最新构建和模拟器测试记录见 [云端验证说明](Verification/GitHubActions验证说明.md)。
 
 ## Windows → GitHub Actions → iPhone
 
@@ -12,7 +12,7 @@
 
 ## 直接打开
 
-在 Mac 上用 Xcode 打开根目录的 **`Cuike.xcodeproj`**，选择 **Cuike** scheme，再选一台 iOS 17 或更新版本的 iPhone 模拟器，点击 Run。建议 Xcode 16 或更新版本；尚未实测具体 Xcode/SDK 组合。
+在 Mac 上用 Xcode 打开根目录的 **`Cuike.xcodeproj`**，选择 **Cuike** scheme，再选一台 iOS 17 或更新版本的 iPhone 模拟器，点击 Run。当前云端构建使用 Xcode 27.0 / iOS 27.0 SDK；最低部署版本仍为 iOS 17。
 
 工程已生成并随包交付，不需要先安装 XcodeGen、CocoaPods、第三方库，也不需要后端服务或 API Key。`Package.swift` 仅供独立运行业务核心测试，主应用请打开 `.xcodeproj`。
 
@@ -40,7 +40,7 @@
 3. 再用真实180秒测试切后台、冷启动恢复。不要用网页快进代替原生计时测试。
 4. 最后用临时借用的 iPhone 核验相机、触感与系统表面。云真机可以补充交互检查，不能代替亲自体验震动。
 
-本交付没有租用云 Mac、创建云服务、上传仓库或产生任何付费资源。
+现已创建 [萃刻私有仓库](https://github.com/liuxingwen1016-sys/cuike-ios)，使用 GitHub 托管 Mac 构建；未租用独立云 Mac。Actions 的额度和费用以 GitHub 账户账单为准。
 
 ## 签名与系统能力
 
@@ -60,9 +60,10 @@
 | Swift 6.0.3 语法解析 | 通过，不等于 Apple SDK 类型检查 |
 | Xcode 工程引用、资源、plist、scheme | 通过，详见 `Verification/project-checks.json` |
 | 纯 Swift 业务核心 XCTest | 12项通过，在本机 WSL / Swift 6.0.3 执行 |
-| SwiftData 持久化与业务集成测试 | 已编写4项，待 Mac 执行 |
-| iOS UI 自动化 | 已编写2项，待模拟器执行 |
-| iOS 编译、启动、截图、真机 | 尚未执行 |
+| SwiftData 持久化与业务集成测试 | 已编写4项，已提交云端模拟器任务，结果待确认 |
+| iOS UI 自动化 | 已编写2项，已提交云端模拟器任务，结果待确认 |
+| iOS 主应用及扩展真机编译 | GitHub Actions / Xcode 27 首轮通过，IPA 已生成 |
+| 模拟器启动、真机安装与系统功能 | 以云端验证说明和后续真机验收记录为准 |
 
 在正常安装 Swift 的环境运行核心测试：
 
@@ -78,7 +79,7 @@ bash Scripts/verify-mac.sh
 
 脚本会选一台已安装的 iPhone 模拟器，并输出日志与 `.xcresult` 到 `build/`。也可用 `CUIKE_SIMULATOR_ID` 指定设备。共享 scheme 包括单元测试和 UI 测试；可在 Xcode 中直接按 Command-U。详细人工验收见 `Docs/验收清单.md`。
 
-`.github/workflows/ios.yml` 是**尚未执行**的 Mac CI 配置；将本 `ios` 目录作为仓库根目录时可使用。如保留外层目录结构，需相应调整 checkout 路径和工作目录。未创建或发布 GitHub 仓库。
+`.github/workflows/build-iphone.yml` 负责真机 IPA；`.github/workflows/ios.yml` 负责模拟器测试。远端仓库直接使用本 `ios` 目录作为根目录；若保留外层目录结构，需相应调整工作流位置和工作目录。
 
 ## 结构
 

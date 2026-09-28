@@ -1,12 +1,107 @@
 {
-  "version": "1.0-source",
+  "version": "1.1-actions-source",
   "date": "2026-09-28",
-  "native_build_verified": false,
+  "native_build_verified": true,
+  "cloud_build_evidence": {
+    "conclusion": "success",
+    "createdAt": "2026-09-28T03:39:59Z",
+    "databaseId": 36374603242,
+    "headSha": "a010eb30c4d4bc7cced9b0f0b480aa94467161d9",
+    "jobs": [
+      {
+        "completedAt": "2026-09-28T03:40:55Z",
+        "conclusion": "success",
+        "databaseId": 108777762300,
+        "name": "iphone",
+        "startedAt": "2026-09-28T03:40:06Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-09-28T03:40:07Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-09-28T03:40:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:08Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-09-28T03:40:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:31Z",
+            "conclusion": "success",
+            "name": "Run core tests",
+            "number": 3,
+            "startedAt": "2026-09-28T03:40:08Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:51Z",
+            "conclusion": "success",
+            "name": "Build device app and package IPA",
+            "number": 4,
+            "startedAt": "2026-09-28T03:40:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:52Z",
+            "conclusion": "success",
+            "name": "Upload IPA for Windows signing",
+            "number": 5,
+            "startedAt": "2026-09-28T03:40:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:52Z",
+            "conclusion": "success",
+            "name": "Upload build logs",
+            "number": 6,
+            "startedAt": "2026-09-28T03:40:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:52Z",
+            "conclusion": "success",
+            "name": "Installation next step",
+            "number": 7,
+            "startedAt": "2026-09-28T03:40:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:53Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 14,
+            "startedAt": "2026-09-28T03:40:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-28T03:40:54Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 15,
+            "startedAt": "2026-09-28T03:40:53Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/liuxingwen1016-sys/cuike-ios/actions/runs/36374603242/job/108777762300"
+      }
+    ],
+    "updatedAt": "2026-09-28T03:40:56Z",
+    "url": "https://github.com/liuxingwen1016-sys/cuike-ios/actions/runs/36374603242"
+  },
   "files": {
-    ".github/workflows/ios.yml": "05116bec061ae93fbda8c7f98b462f70658621c1a1fbc2a619c86830574e7da6",
-    ".gitignore": "311427fcde19171be0334d2e1e83023204f789bb280cf3475406af53c0ceec84",
+    ".gitattributes": "c2557aa63f27cd185591ed05067c8fd4b58dd4df5570412a6ce0865c8e8912d7",
+    ".github/workflows/build-iphone.yml": "469d71095aa0136f9f38abfc7209ffbf16bce99cf8d439cd6caa9cf7a2bba220",
+    ".github/workflows/ios.yml": "50d15112a8b13591c80275ae368b0f5819c5d5f81a86773eb47e4bcb17a3bcbf",
+    ".gitignore": "06777f51354c84fce1c7a739d2b529f17ac4f8b9cf22b934aa516bd4484cc589",
     "App/Cuike.entitlements": "7592dc9e0b3359df59c4ebaf2aad23691e4c5e08bf3ffc6bb0a19ff3ed87cfcc",
-    "App/CuikeApp.swift": "37a2459f660fd3a7250b406482ad5532f13991a95974763efed62d5e086a28b9",
+    "App/CuikeApp.swift": "0adcb6fdbaf42d073c79cc38d95dd41952f994e0a6f79c65ac050554f1912e94",
     "App/Data/BrewStore.swift": "8a36e6f56d114c62f4c2d7a3f0041cb648176cd5cafac95a4d238bd969f633e3",
     "App/Data/Models.swift": "e2c01a5e71026a3882dbd7e1ed467c6769ee2c748f45498e19a94b05ad8e69dd",
     "App/Design/Theme.swift": "556e6c57b5fbb544abd506b326ceac412841a9b76684f434c7e234a3be0b33b7",
@@ -28,9 +123,10 @@
     "Core/BrewDomain.swift": "d787fc07d6a66c1c34aa3f22efb38b72c0a44d37afaf0607971aa4a7bb7a6b2c",
     "Cuike.xcodeproj/project.pbxproj": "7bb84151fa57dd21aafdc91a654ae08f00cfff806007ba1dda0e53745dc01c61",
     "Cuike.xcodeproj/xcshareddata/xcschemes/Cuike.xcscheme": "61591eb926de814b3eecdb788fb73ebdf0060d4958bac65aa2275c9d9d239762",
+    "Docs/GitHubActions到iPhone.md": "32266ec0b4bd08fb252a1b9208d18307e0e537374867a3c6203f4494c9b45d0b",
     "Docs/验收清单.md": "3b4de52762f5537ba316908fe82e89b72539ea2fe92c78aff75482a4a1d34d0f",
     "Package.swift": "b2d79e091725ac411935a6a447aeec8bb82e7ce8408b8ee201a698e8b6a02e29",
-    "README.md": "fa17dba223948c22b7e85baabf9498d645a2fb343bdedafba6e80e26956f49ed",
+    "README.md": "c3af8034b55b08215d35d8dc22797603532714ff2550b5d71b5eae258d12d214",
     "Resources/Assets.xcassets/AccentColor.colorset/Contents.json": "2918188f761e12b8e493f80428a83d2d0522d822e10a7990b2f4ac8c31a5c132",
     "Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "ee8382c8905117a803ce2bd0d3dfcf6cb382efad909c5296fc9058549241bed6",
     "Resources/Assets.xcassets/AppIcon.appiconset/Contents.json": "174eef16ce9c42c9332e39420ef7464cf3e9efaea8c52d8d7564ad7179b1fa35",
@@ -41,18 +137,21 @@
     "Resources/Assets.xcassets/Paper.colorset/Contents.json": "eaa4bd8828774a20ebb793c4730dbc8ba5fdbaded4f21e2a297a0cf4cbc43342",
     "Resources/PrivacyInfo.xcprivacy": "f953ba99994eddf8fe1c7d1723ca44a2da3df5ac96b05f09f375fa3d76f465cc",
     "Resources/sample-bean.png": "6433f352b19199dec280ef702e2b5f12e9c2bb51f850754376312c810a14b337",
+    "Scripts/build-iphone.sh": "17f0fa7ce3a7525cc9ebf9605c639f36813cbd5c3a0e1369be218c7bc05bd109",
     "Scripts/check_project.py": "62300f69ac15bf13e2a424161d30fcf9b6b6431d58b916b32a804dac2ca55637",
     "Scripts/generate_project.py": "0bc2a52006d78dc16dc77ac700216214e5b4f5ecc60ad0c4b107d76d98979308",
     "Scripts/make_assets.py": "8038f3997d008e0540b63079ae8c1bd13b9455946766f003416956d461eb2d8c",
-    "Scripts/package_source.py": "3f35ac81ea722e4779b158d7d7afa90d4cdf6e049675743db51ef3480d1f01fb",
+    "Scripts/package_source.py": "e36f3b00dbda01be20ba3e2885edd4ee9c248d0285d978eba1bea8ced89530f8",
     "Scripts/verify-mac.sh": "c8b219033f6b39419e53b3ff6e342e55d27a383bbd4c6d54162980abb6bca354",
     "Shared/BrewActivityAttributes.swift": "16461e5e05b9e2fba324fb814dafd70095a4717e97e14f1c6f718abce4d00e56",
     "Shared/SharedSnapshot.swift": "e22ad47d1bdbc2db35476b8e3d3c590a6948ff889b9fbb2f9ed52315b1ae1af2",
     "Tests/AppTests/BrewStoreTests.swift": "ac16087b9fb3ef6ae7c158eaa5991466f6d40a48697a9d6ab17715bff690283a",
     "Tests/CoreTests/BrewDomainTests.swift": "2bfbdeeaf6223fd7766a9f4811977ee4dbb6f1c53290698bb9e98a251d3235bc",
     "Tests/UITests/CuikeUITests.swift": "a6e6b4e38edb641a87768664c3180f481e274a25f5cde8f2fac18a912184cffc",
-    "Verification/project-checks.json": "cf01e8fe7241971644352bf1cd969aa46525da15e9cae7d705bae14064153447",
-    "Verification/本次验证说明.md": "b9391abdba24d935c809c57018c30dc8e91ed8b7ff8c603efe04ee2c90cfa6a6",
+    "Verification/cloud-build.json": "13a9de2e5f8ac0f1f8cb36d66dea703c674ab1135e2d9efea6bc36d9bd13a142",
+    "Verification/GitHubActions验证说明.md": "27ada677771dca1c4f4c93940ca9de8d5d4406ea2863d977c032b55bff796a81",
+    "Verification/project-checks.json": "f5007172d6adb3a7d16b2435dbcea32c9c5c7b6acd6fbae06c4a47734f445150",
+    "Verification/本次验证说明.md": "ef01952a2c43be71715bb15ec1c53d136073f503b8bd56e3f7a63ddd7ba6bcda",
     "Widgets/CuikeWidgets.entitlements": "7592dc9e0b3359df59c4ebaf2aad23691e4c5e08bf3ffc6bb0a19ff3ed87cfcc",
     "Widgets/CuikeWidgets.swift": "e704faca6f5d4fbaa6e7a3114b58dbe9e1a99d7705a18103ccf2ab2729084512",
     "Widgets/Info.plist": "7916327f0a54ebeb35b42465a869c7fe6afd411df9db63e11a976ef17b64d4f6"
